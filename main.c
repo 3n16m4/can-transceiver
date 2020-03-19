@@ -80,6 +80,7 @@ int parse(int argc, char *argv[], struct can_config *out) {
      * function works by parsing one byte instead of each character.
      * */
     if (hex2bytes(out->data, argv[2], data_size / 2) == NULL) {
+        fprintf(stderr, "Invalid character in CAN-Data!\n");
         return -1;
     }
 
