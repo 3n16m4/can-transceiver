@@ -1,8 +1,6 @@
 #ifndef CAN_TRANSCEIVER_CAN_TRANSCEIVER_H
 #define CAN_TRANSCEIVER_CAN_TRANSCEIVER_H
 
-// version 2 of the GNU General Public License
-
 /**
  * bitrate 500000 sample_point 0.875 (87.5%)
  * https://www.kernel.org/doc/Documentation/networking/can.txt

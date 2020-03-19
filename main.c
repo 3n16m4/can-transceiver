@@ -5,7 +5,7 @@
 
 #include "can_transceiver.h"
 
-#define MAX_CAN_HEX_STR (8 << 1)
+#define MAX_CAN_HEX_STR (8u << 1u)
 
 static char const *usage_msg =
     "Usage: can-transceiver <device> <data> [<filter-canid>]\n"
