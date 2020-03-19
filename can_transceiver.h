@@ -20,8 +20,7 @@ typedef int32_t sockfd_t;
 
 struct can_config {
     char *device;
-    uint32_t data;
-    uint32_t bitrate;
+    uint8_t data[CAN_MAX_DLEN] __attribute__((aligned(8)));
     uint32_t filter_canid;
 };
 
@@ -32,10 +31,7 @@ struct can_transceiver {
     sockfd_t sfd;
 };
 
-typedef enum {
-    CAN_SUCCESS =  0,
-    CAN_FAILURE = -1
-} can_types;
+typedef enum { CAN_SUCCESS = 0, CAN_FAILURE = -1 } can_types;
 
 int can_transceiver_open(struct can_transceiver *ctrans);
 
